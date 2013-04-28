@@ -1,8 +1,24 @@
 <!doctype html>
 
-<html>
-	<head></head>
-	<body>
-		Hello World!		
+<html ng-app>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+		<script src="players.js"></script>
+	</head>
+	<body ng-controller="PlayerCtrl">
+
+		<form ng-submit="addPlayer()">
+			<input type="text" ng-model="newPlayer" placeholder="Player Name">
+			<input class="btn-primary" type="submit" value="add">
+		</form>
+
+		<label>New Player: {{newPlayer}}</label>
+
+		<h2>Players</h2>
+		<ul>
+			<li ng-repeat="player in players">
+				<label>{{player.text}}</label>
+			</li>
+		</ul>
 	</body>
 </html>
