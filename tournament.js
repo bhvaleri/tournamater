@@ -1,4 +1,4 @@
-function PlayerCtrl ($scope) {
+function TournamentCtrl ($scope) {
 	$scope.players = [];
 
 	$scope.addPlayer = function () {
