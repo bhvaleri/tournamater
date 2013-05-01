@@ -1,3 +1,10 @@
 #newPlayerForm-8 {
-	display:none
+	display: none
+}
+
+#newTournament {
+	display: none;
+}
+#newPlayerForm-8 ~ #newTournament {
+	display: block;
 }
